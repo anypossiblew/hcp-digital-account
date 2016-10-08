@@ -1,0 +1,18 @@
+{
+    "exposed": true,
+    "authentication": null,
+
+    "mime_mapping": [{
+        "extension": "jpg",
+        "mimetype": "image/jpeg"
+    }],
+    "force_ssl": true,
+    "enable_etags": true,
+    "prevent_xsrf": true,
+    "anonymous_connection": "digital-account::DigAccMessage",
+    "cors": [{
+        "enabled": true
+    }],
+    "cache_control": "no-cache, no-store",
+    "default_file": "index.html"
+}

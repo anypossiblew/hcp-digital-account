@@ -1,0 +1,13 @@
+namespace "digital-account".data;
+
+@Schema: 'DigAcc'
+context DigAccMessage {
+
+	type Content : String(5000);
+	
+	entity Message {
+		key id : Integer;
+		createdTime: UTCTimestamp;
+		content: Content;
+	};
+};

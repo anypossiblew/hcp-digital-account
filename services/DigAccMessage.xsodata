@@ -1,0 +1,10 @@
+service namespace "digital-account.services" {
+	"digital-account.data::DigAccMessage.MessageView" as "Messages" keys("id", "eventID");
+	"digital-account.data::DigAccMessage.Message" as "Message" navigates ("Message_Events" as "events") delete forbidden
+	    create using "digital-account:message.xsjslib::createMessage";
+	"digital-account.data::DigAccMessage.Event" as "Event" delete forbidden;
+	
+	association "Message_Events" with referential constraint principal 
+		"Message"("id") multiplicity "1" 
+		dependent "Event"("message") multiplicity "*";
+}

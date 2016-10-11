@@ -2,12 +2,70 @@ namespace "digital-account".data;
 
 @Schema: 'DigAcc'
 context DigAccMessage {
-
+    
+    /**
+     * User-Defined Structured Type for Message Content
+     */
 	type Content : String(5000);
+	// Event ID Type
+	type EventID : String(20);
+	// User ID Type
+	type UserID : String(40);
 	
+	/**
+	 * Table definition for Inbound Message
+	 */
 	entity Message {
 		key id : Integer;
 		createdTime: UTCTimestamp;
+		events : Association[*] to Event on events.message = id;
 		content: Content;
+	};
+	
+	/**
+	 * Table definition for Events in a Message
+	 */
+	entity Event {
+		key message: Integer;
+		key id: EventID;
+		createdTime: UTCTimestamp;
+    	eventType: String(20);
+      	fromUser: Association to User;
+      	toUser: Association to User;
+		subscribers: Association[*] to Subscriber on subscribers.event = id;
+		content : Content;
+	};
+	
+	/**
+	 * Table definition for the Users in an Event
+	 */
+	entity Subscriber{
+	    key event: EventID;
+		key user: Association to User;
+	}
+	
+	/**
+	 * Table definition for User info
+	 */
+	entity User {
+		key id: UserID;
+		@SearchIndex.fuzzy: { enabled: true }
+		displayName: String(100);
+		pictureUrl: String(100);
+		statusMessage: String(100);
+	};
+	
+	/**
+	 * View definition for Messages
+	 */
+	view MessageView AS SELECT FROM Message {
+	    id,
+	    createdTime,
+	    events.id as eventID,
+	    events.eventType as eventType,
+	    events.toUser.id as toUserID,
+	    events.toUser.displayName as toUserName,
+	    events.subscribers.user.id as userID,
+	    events.subscribers.user.displayName as userName
 	};
 };

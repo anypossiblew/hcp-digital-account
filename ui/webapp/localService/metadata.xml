@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="digital-account.services"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="MessagesType">
+                <Key>
+                    <PropertyRef Name="id" />
+                    <PropertyRef Name="eventID" />
+                </Key>
+                <Property Name="id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="createdTime" Type="Edm.DateTime" />
+                <Property Name="eventID" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="eventType" Type="Edm.String" MaxLength="20" />
+                <Property Name="toUserID" Type="Edm.String" MaxLength="40" />
+                <Property Name="toUserName" Type="Edm.String" MaxLength="100" />
+                <Property Name="userID" Type="Edm.String" MaxLength="40" />
+                <Property Name="userName" Type="Edm.String" MaxLength="100" />
+            </EntityType>
+            <EntityType Name="MessageType">
+                <Key>
+                    <PropertyRef Name="id" />
+                </Key>
+                <Property Name="id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="createdTime" Type="Edm.DateTime" />
+                <Property Name="content" Type="Edm.String" MaxLength="5000" />
+                <NavigationProperty Name="events" Relationship="digital-account.services.Message_EventsType" FromRole="MessagePrincipal" ToRole="EventDependent" />
+            </EntityType>
+            <EntityType Name="EventType">
+                <Key>
+                    <PropertyRef Name="message" />
+                    <PropertyRef Name="id" />
+                </Key>
+                <Property Name="message" Type="Edm.Int32" Nullable="false" />
+                <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="createdTime" Type="Edm.DateTime" />
+                <Property Name="eventType" Type="Edm.String" MaxLength="20" />
+                <Property Name="fromUser.id" Type="Edm.String" MaxLength="40" />
+                <Property Name="toUser.id" Type="Edm.String" MaxLength="40" />
+                <Property Name="content" Type="Edm.String" MaxLength="5000" />
+            </EntityType>
+            <Association Name="Message_EventsType">
+                <End Type="digital-account.services.MessageType" Role="MessagePrincipal" Multiplicity="1"/>
+                <End Type="digital-account.services.EventType" Role="EventDependent" Multiplicity="*"/>
+                <ReferentialConstraint>
+                    <Principal Role="MessagePrincipal">
+                        <PropertyRef Name="id"/>
+                    </Principal>
+                    <Dependent Role="EventDependent">
+                        <PropertyRef Name="message"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="DigAccMessage" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Messages" EntityType="digital-account.services.MessagesType" />
+                <EntitySet Name="Message" EntityType="digital-account.services.MessageType" />
+                <EntitySet Name="Event" EntityType="digital-account.services.EventType" />
+                <AssociationSet Name="Message_Events" Association="digital-account.services.Message_EventsType">
+                    <End Role="MessagePrincipal" EntitySet="Message"/>
+                    <End Role="EventDependent" EntitySet="Event"/>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

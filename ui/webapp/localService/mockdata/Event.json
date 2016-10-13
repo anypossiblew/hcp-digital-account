@@ -1,0 +1,41 @@
+[
+  {
+    "__metadata": {
+      "type": "digital-account.services.EventType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Event(message=4,id='ABCDEF-12345678901')"
+    },
+    "message": 4,
+    "id": "ABCDEF-12345678901",
+    "createdTime": null,
+    "eventType": "138311609000106303",
+    "fromUser.id": "u206d25c2ea6bd87c17655609a1c37cb8",
+    "toUser.id": "u93892c0a44ffce86e7b5cb67edc55677",
+    "content": "{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678901\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}"
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.EventType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Event(message=5,id='ABCDEF-12345678902')"
+    },
+    "message": 5,
+    "id": "ABCDEF-12345678902",
+    "createdTime": null,
+    "eventType": "138311609000106303",
+    "fromUser.id": "u206d25c2ea6bd87c17655609a1c37cb8",
+    "toUser.id": "u93892c0a44ffce86e7b5cb67edc55677",
+    "content": "{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678902\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}"
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.EventType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Event(message=6,id='ABCDEF-12345678903')"
+    },
+    "message": 6,
+    "id": "ABCDEF-12345678903",
+    "createdTime": null,
+    "eventType": "138311609000106303",
+    "fromUser.id": "u206d25c2ea6bd87c17655609a1c37cb8",
+    "toUser.id": "u93892c0a44ffce86e7b5cb67edc55677",
+    "content": "{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678903\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}"
+  }
+]

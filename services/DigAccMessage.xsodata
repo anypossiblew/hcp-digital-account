@@ -8,3 +8,7 @@ service namespace "digital-account.services" {
 		"Message"("id") multiplicity "1" 
 		dependent "Event"("message") multiplicity "*";
 }
+
+annotations {
+   enable OData4SAP;
+}

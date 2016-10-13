@@ -1,0 +1,114 @@
+[
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(1)"
+    },
+    "id": 1,
+    "createdTime": "/Date(1476079713066)/",
+    "content": "{\"result\":[{\"content\":{\"text\":\"Hello world!\"},\"createdTime\":1475033537220,\"eventType\":\"138311609000106303\",\"id\":\"WB1519-3872640834\"}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(1)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(2)"
+    },
+    "id": 2,
+    "createdTime": "/Date(1476083967400)/",
+    "content": "{\"result\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678901\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083966223,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(2)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(3)"
+    },
+    "id": 3,
+    "createdTime": "/Date(1476083983636)/",
+    "content": "{\"result\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678901\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(3)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(4)"
+    },
+    "id": 4,
+    "createdTime": "/Date(1476092310077)/",
+    "content": "{\"result\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678901\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(4)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(5)"
+    },
+    "id": 5,
+    "createdTime": "/Date(1476092807821)/",
+    "content": "{\"result\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678902\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(5)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(6)"
+    },
+    "id": 6,
+    "createdTime": "/Date(1476093087853)/",
+    "content": "{\"result\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678903\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(6)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(7)"
+    },
+    "id": 7,
+    "createdTime": "/Date(1476170226523)/",
+    "content": "{\"result\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678902\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(7)/events"
+      }
+    }
+  },
+  {
+    "__metadata": {
+      "type": "digital-account.services.MessageType",
+      "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(8)"
+    },
+    "id": 8,
+    "createdTime": "/Date(1476170399104)/",
+    "content": "{\"es\":[{\"from\":\"u206d25c2ea6bd87c17655609a1c37cb8\",\"fromChannel\":1341301815,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toChannel\":1480700231,\"eventType\":\"138311609000106303\",\"id\":\"ABCDEF-12345678902\",\"content\":{\"id\":\"1234567890123\",\"contentType\":1,\"from\":\"uffffffffffffffffffffffffffffffff\",\"createdTime\":1476083982493,\"to\":[\"u93892c0a44ffce86e7b5cb67edc55677\"],\"toType\":1,\"contentMetadata\":null,\"text\":\"Hello,world!\",\"location\":null}}]}",
+    "events": {
+      "__deferred": {
+        "uri": "https://linec5235715trial.hanatrial.ondemand.com:443/digital-account/services/DigAccMessage.xsodata/Message(8)/events"
+      }
+    }
+  }
+]

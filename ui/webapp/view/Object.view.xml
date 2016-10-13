@@ -1,0 +1,59 @@
+<mvc:View controllerName="digacc.manager.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar">
+	<Page id="page" navButtonPress="onNavBack" showNavButton="true" title="{i18n>objectTitle}" busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+		<content>
+			<ObjectHeader id="objectHeader" title="{createdTime}" number="{ path: 'id', formatter: '.formatter.numberUnit' }"></ObjectHeader>
+			<Table
+				id="itemsList"
+				width="auto"
+				items="{events}"
+				noDataText="{i18n>tableNoDataText}"
+				busy="{objectView>/busy}"
+				busyIndicatorDelay="{objectView>/delay}"
+				class="sapUiResponsiveMargin">
+				<columns>
+					<Column>
+						<Text text="{i18n>objectItemTableIDColumn}"/>
+					</Column>
+					<Column
+						minScreenWidth="Tablet"
+						demandPopin="true"
+						hAlign="Right">
+						<Text text="{i18n>objectItemTableUnitNumberColumn}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier
+								title="{eventType}"
+								text="{id}"/>
+							<ObjectNumber
+								number="{
+									path: 'message',
+									formatter: '.formatter.currencyValue'
+								}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<footer>
+			<OverflowToolbar id="footerToolbar">
+				<ToolbarSpacer/>
+				<Button id="shareButton" tooltip="{i18n>shareTooltip}" icon="sap-icon://action" press="onSharePress">
+					<dependents>
+						<ActionSheet id="shareSheet" showCancelButton="true" placement="Top">
+							<buttons>
+								<Button id="shareEmail" icon="sap-icon://email" text="{i18n>shareSendEmail}" press="onShareEmailPress"/>
+								<Button id="shareInJam" icon="sap-icon://jam" text="{i18n>shareOnJamTitle}" press="onShareInJamPress" visible="{FLP>/isShareInJamActive}"/>
+								<footerbar:AddBookmarkButton id="shareTile" appData="{ path: 'objectView>/saveAsTileTitle', formatter: '.formatter.shareTileData' }"/>
+							</buttons>
+						</ActionSheet>
+					</dependents>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

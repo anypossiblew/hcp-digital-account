@@ -1,0 +1,85 @@
+{
+    "name": "SAP HANA Database Administration",
+    "type": "fiori",
+    "widgets": [
+        {
+            "type": "sap.hana.uis.tile.UI5",
+            "ID": "79d68dbd-1fc7-4607-95cb-884e4c386490-1407824882411",
+            "properties": [
+                {
+                    "key": "icon",
+                    "value": ""
+                },
+                {
+                    "key": "title",
+                    "value": "Digital Account Manager",
+                    "type": "text"
+                },
+                {
+                    "key": "subtitle",
+                    "value": "",
+                    "type": "text"
+                },
+                {
+                    "key": "info",
+                    "value": "",
+                    "type": "text"
+                },
+                {
+                    "key": "display_title_text",
+                    "value": "Digital Account Manager",
+                    "type": "text"
+                },
+                {
+                    "key": "display_subtitle_text",
+                    "value": "",
+                    "type": "text"
+                },
+                {
+                    "key": "display_search_keywords",
+                    "value": "system,status"
+                },
+                {
+                    "key": "sap.hana.uis.ui5tile.module_type",
+                    "value": "JS"
+                },
+                {
+                    "key": "sap.hana.uis.ui5tile.module_namespace",
+                    "value": "digital-account.app.tiles"
+                },
+                {
+                    "key": "sap.hana.uis.ui5tile.module_url",
+                    "value": "digital-account/app/tiles"
+                },
+                {
+                    "key": "sap.hana.uis.ui5tile.module_name",
+                    "value": "digital-account.app.tiles.DigAccTile"
+                },
+                {
+                    "key": "navigation_use_semantic_object",
+                    "value": "true"
+                },
+                {
+                    "key": "targetURL",
+                    "value": "#digacc-show"
+                },
+                {
+                    "key": "navigation_semantic_object",
+                    "value": "digacc"
+                },
+                {
+                    "key": "navigation_semantic_action",
+                    "value": "show"
+                },
+                {
+                    "key": "navigation_semantic_parameters",
+                    "value": ""
+                },
+                {
+                    "key": "request",
+                    "value": "digAcc"
+                }
+            ]
+        }
+    ]
+}

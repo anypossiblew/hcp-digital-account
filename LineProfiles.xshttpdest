@@ -1,0 +1,10 @@
+description = "Trialbot Profiles of Line";
+host = "trialbot-api.line.me";
+port = 443;
+pathPrefix = "/v1/profiles";
+proxyType = http;
+proxyHost = "proxy-trial";
+proxyPort = 8080;
+authType = none;
+useSSL = true;
+timeout = 0;

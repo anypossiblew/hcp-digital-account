@@ -2,6 +2,8 @@
 var conSQLConnection = "digital-account::DigAccMessage",
 	conSchema = "\"DigAcc\"",
 	conMessageTable = "\"digital-account.data::DigAccMessage.Message\"";
+var conDestPackage = "digital-account",
+    conLineDestName = "LineProfiles";
 
 var contentType;
 
@@ -27,6 +29,13 @@ function saveMessage(content) {
 
 	// All database changes must be explicitly commited
 	conn.commit();
+	
+	var i = 0;
+	if(content.result && content.result.length > 0) {
+		for(i = 0; i < content.result.length; i++) {
+			getUserProfiles(content.result[i].to);
+		}
+	}
 
 	$.response.status = $.net.http.OK;
 	body = {
@@ -73,6 +82,25 @@ function handlePost() {
 		 return {"myResult":"Missing BODY"};
 	}
 	return saveMessage(JSON.parse(bodyStr));
+}
+
+function getUserProfiles( persons ) {
+	var mids = persons.join(",");
+	
+   var dest = $.net.http.readDestination(conDestPackage, conLineDestName);
+   var client = new $.net.http.Client();
+   var req = new $.web.WebRequest($.net.http.GET, "?mids="+mids);
+   req.headers.set("X-Line-ChannelID", "1480700231");
+   req.headers.set("X-Line-ChannelSecret", "2fbbc5490892c7ce4a7294ff7d3700d9");
+   req.headers.set("X-Line-Trusted-User-With-ACL", "u93892c0a44ffce86e7b5cb67edc55677");
+   client.request(req, dest);
+   var response = client.getResponse();  
+   var contacts = JSON.parse(response.body.asString()).contacts;
+   
+   var i = 0;
+   for(i = 0; i < contacts.length; i++) {
+	    $.trace.info(contacts[i]);
+   }
 }
 
 // Check Content type headers and parameters
